@@ -12,6 +12,20 @@ O objetivo é que cada aluno trabalhe em uma cópia própria do repositório no 
 - O aluno deve fazer commits pequenos e com mensagens significativas.
 - O aluno deve resolver conflitos de merge de forma consciente, preservando as duas intenções de mudança quando fizer sentido.
 
+## Requisitos para Windows
+
+No Windows, use o terminal **Git Bash**, instalado junto com o Git for Windows.
+
+Não use PowerShell ou CMD para executar os scripts `.sh`.
+
+Comandos:
+
+```bash
+./exercises/01-develop/check.sh
+./exercises/02-feature-commits/check.sh
+./exercises/03-merge-conflict/setup.sh
+./exercises/03-merge-conflict/check.sh
+
 ## Como usar
 
 Clone sua cópia individual do repositório:
