@@ -25,6 +25,7 @@ Comandos:
 ./exercises/02-feature-commits/check.sh
 ./exercises/03-merge-conflict/setup.sh
 ./exercises/03-merge-conflict/check.sh
+```
 
 ## Como usar
 
