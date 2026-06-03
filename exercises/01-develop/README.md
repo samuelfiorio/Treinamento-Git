@@ -1,53 +1,50 @@
-# Exercício 01 — Criando a branch `develop`
+# Exercício 01 — Preparando o fluxo de trabalho
+
+## Contexto
+
+Você recebeu um repositório inicial que representa a base de um pequeno projeto. A branch `main` deve permanecer como referência estável do projeto.
+
+Sua tarefa é preparar o repositório para um fluxo de desenvolvimento mais próximo do usado em equipes, separando o trabalho em uma branch de integração antes que novas funcionalidades sejam desenvolvidas.
 
 ## Objetivo
 
-Você vai criar a branch `develop` a partir da `main`, fazer uma pequena alteração de planejamento e enviar essa branch para o GitLab.
+Criar a estrutura inicial de trabalho para que as próximas alterações do projeto não sejam feitas diretamente na `main`.
 
-## Passos
+## O que deve ser entregue
 
-Confira que você está na `main`:
+Ao final do exercício, deve existir uma branch de integração criada a partir da `main` e enviada para o GitLab.
 
-```bash
-git branch
-```
+Também deve existir um pequeno documento dentro da pasta `docs/` explicando, com suas palavras, como você pretende organizar o desenvolvimento das próximas etapas do treinamento.
 
-Crie a branch `develop`:
+Esse documento deve demonstrar que você entendeu:
 
-```bash
-git checkout -b develop
-```
+- o papel da branch de integração;
+- o motivo de trabalhar em branches separadas para novas alterações;
+- como alterações prontas voltam para a linha principal de desenvolvimento.
 
-Crie o arquivo `docs/plano-de-desenvolvimento.md` com um pequeno plano do que será desenvolvido neste treinamento.
+## Restrições
 
-O arquivo precisa mencionar:
+- Não faça commits diretamente na `main`.
+- Não copie comandos de colegas.
+- Escreva o documento com suas próprias palavras.
+- Use uma mensagem de commit que descreva a intenção da alteração, não apenas que um arquivo foi modificado.
 
-- `develop`
-- `feature`
-- `merge`
+## Validação
 
-Faça o commit com uma mensagem clara:
-
-```bash
-git add docs/plano-de-desenvolvimento.md
-git commit -m "Cria plano de desenvolvimento do treinamento"
-```
-
-Valide localmente:
+Depois de concluir sua solução, execute a validação local do projeto:
 
 ```bash
 ./scripts/validate.sh
 ```
 
-Envie para o GitLab:
+Se a validação passar, envie sua branch para o GitLab.
 
-```bash
-git push -u origin develop
-```
+## Dicas
 
-## Critérios de aceite
+Você provavelmente precisará usar comandos relacionados a:
 
-- A branch atual deve ser `develop`.
-- O arquivo `docs/plano-de-desenvolvimento.md` deve existir.
-- O arquivo deve mencionar `develop`, `feature` e `merge`.
-- A working tree deve estar limpa.
+- visualizar branches existentes;
+- criar uma nova branch;
+- adicionar arquivos ao controle de versão;
+- criar um commit;
+- enviar uma branch para o remoto.
