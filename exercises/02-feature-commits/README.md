@@ -1,73 +1,43 @@
-# Exercício 02 — Construindo uma feature com commits significativos
+# Exercício 02 — Desenvolvendo uma pequena feature
+
+## Contexto
+
+Agora que o projeto já possui uma branch de integração, você deverá desenvolver uma alteração isolada em uma branch própria de feature.
+
+A equipe quer começar a registrar, dentro da aplicação, uma lista simples de etapas do treinamento. O arquivo inicial já existe em `app/tasks.md`, mas ainda está incompleto.
 
 ## Objetivo
 
-Você vai simular a construção de uma nova funcionalidade usando uma branch de feature criada a partir da `develop`.
+Implementar a primeira versão dessa lista de tarefas de forma incremental, usando commits que mostrem a evolução do trabalho.
 
-A feature será uma pequena lista de tarefas em `app/tasks.md`.
+## O que deve ser entregue
 
-## Preparação
+Ao final do exercício, deve existir uma branch de feature criada a partir da branch de integração.
 
-Comece a partir da `develop` atualizada:
+Nessa branch, o arquivo `app/tasks.md` deve representar uma lista útil para alguém que está fazendo o treinamento. A lista precisa cobrir as principais etapas práticas que a pessoa executará durante o curso.
 
-```bash
-git checkout develop
-git pull origin develop
-```
+O histórico da branch deve mostrar uma evolução compreensível do trabalho, em mais de um commit.
 
-Crie a branch da feature:
+## Restrições
 
-```bash
-git checkout -b feature/task-list
-```
-
-## Tarefa
-
-Edite `app/tasks.md` para representar uma lista de tarefas simples.
-
-O arquivo final precisa conter pelo menos estas três tarefas:
-
-- Preparar ambiente
-- Criar branch develop
-- Resolver conflito de merge
-
-Faça pelo menos **dois commits** na branch `feature/task-list`.
-
-Exemplo de divisão aceitável:
-
-```bash
-# primeiro commit
-git add app/tasks.md
-git commit -m "Adiciona estrutura inicial da lista de tarefas"
-
-# segundo commit
-git add app/tasks.md
-git commit -m "Inclui tarefas principais do treinamento"
-```
-
-Evite mensagens vagas como:
-
-- `update`
-- `fix`
-- `changes`
-- `wip`
+- Não desenvolva a feature diretamente na branch de integração.
+- Não entregue tudo em um único commit.
+- Não use mensagens genéricas de commit, como `update`, `fix`, `changes`, `wip` ou similares.
+- Não altere arquivos que não estejam relacionados à feature.
+- Não reescreva o histórico de branches compartilhadas.
 
 ## Validação
+
+Depois de concluir sua solução, execute:
 
 ```bash
 ./scripts/validate.sh
 ```
 
-Envie para o GitLab:
+Se a validação passar, envie sua branch para o GitLab.
 
-```bash
-git push -u origin feature/task-list
-```
+## Dicas
 
-## Critérios de aceite
+Antes de começar, garanta que sua branch de integração local esteja atualizada.
 
-- A branch deve se chamar `feature/task-list`.
-- A branch deve ter pelo menos dois commits depois da `develop`.
-- As mensagens dos commits devem ser minimamente descritivas.
-- `app/tasks.md` deve conter as três tarefas obrigatórias.
-- A working tree deve estar limpa.
+Durante o exercício, pense em como você dividiria a entrega para facilitar uma futura revisão de código. Cada commit deve representar uma etapa lógica do desenvolvimento.
