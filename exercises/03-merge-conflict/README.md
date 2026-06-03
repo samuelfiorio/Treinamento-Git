@@ -1,59 +1,61 @@
-# Exercício 03 — Resolvendo conflito de merge com a `develop`
+# Exercício 03 — Resolvendo um conflito de merge
+
+## Contexto
+
+Em projetos reais, é comum que duas branches alterem a mesma parte de um arquivo antes de serem integradas. Quando isso acontece, o Git pode não conseguir decidir sozinho qual versão manter.
+
+Neste exercício, você deverá resolver um conflito real gerado no repositório.
 
 ## Objetivo
 
-Você vai gerar um conflito real entre a branch `develop` e uma branch de feature, resolver o conflito e registrar a resolução em um commit.
+Resolver corretamente um conflito entre a branch de integração e uma branch de feature, preservando o sentido das duas alterações concorrentes.
 
-Neste exercício, o conflito acontece em `app/about.md`.
+## Preparação
 
-## Preparação automática
-
-A partir de qualquer branch limpa, rode:
+Execute o script de preparação do exercício:
 
 ```bash
 ./exercises/03-merge-conflict/setup.sh
 ```
 
-Esse script vai:
+O script colocará o repositório em um estado com conflito aberto. A partir desse ponto, a solução é sua responsabilidade.
 
-1. Voltar para `develop`.
-2. Criar ou atualizar a branch `feature/about-page`.
-3. Fazer uma alteração em `app/about.md` na feature.
-4. Fazer uma alteração concorrente no mesmo trecho em `develop`.
-5. Tentar fazer merge da `develop` na feature, gerando conflito.
+## O que deve ser entregue
 
-Ao final, você deve estar na branch `feature/about-page` com um conflito aberto.
+Ao final do exercício:
 
-## Sua tarefa
+- o conflito deve estar resolvido;
+- o arquivo afetado deve conter uma versão final coerente;
+- nenhuma marca interna de conflito do Git deve permanecer no projeto;
+- a resolução deve estar registrada em commit;
+- a branch da feature deve ser enviada ao GitLab.
 
-Abra `app/about.md`, remova os marcadores de conflito e escreva uma versão final que preserve as duas ideias:
+A versão final do texto deve fazer sentido como conteúdo de produto/documentação. Não basta escolher um dos lados do conflito sem avaliar o que foi perdido.
 
-- O projeto tem exercícios práticos.
-- O projeto usa fluxo com develop e code review.
+## Restrições
 
-Depois finalize o merge:
+- Não apague o arquivo conflitante para “resolver” o problema.
+- Não aceite automaticamente um lado do conflito sem revisar o conteúdo.
+- Não deixe marcadores de conflito no arquivo.
+- Não reinicie o exercício para evitar resolver o conflito manualmente.
+- Não faça a resolução diretamente na branch de integração.
 
-```bash
-git add app/about.md
-git commit
-```
+## Validação
 
-Valide:
+Depois de resolver o conflito e registrar sua solução, execute:
 
 ```bash
 ./scripts/validate.sh
 ```
 
-Envie para o GitLab:
+Se a validação passar, envie sua branch para o GitLab.
 
-```bash
-git push -u origin feature/about-page
-```
+## Dicas
 
-## Critérios de aceite
+Você provavelmente precisará investigar:
 
-- A branch deve se chamar `feature/about-page`.
-- Não pode haver marcadores de conflito no projeto.
-- `app/about.md` deve conter as ideias de `exercícios práticos`, `develop` e `code review`.
-- A branch deve conter um merge commit ou um commit de resolução depois da preparação.
-- A working tree deve estar limpa.
+- qual arquivo está em conflito;
+- quais trechos vieram de cada branch;
+- como editar o arquivo para produzir uma versão final única;
+- como informar ao Git que o conflito foi resolvido;
+- como concluir o merge após a resolução.
