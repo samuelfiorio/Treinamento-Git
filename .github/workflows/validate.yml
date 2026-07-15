@@ -1,0 +1,21 @@
+name: Validar treinamento Git
+
+on:
+  push:
+    branches:
+      - develop
+      - feature/task-list
+      - feature/about-page
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rodar validação
+        env:
+          CI_COMMIT_BRANCH: ${{ github.ref_name }}
+        run: bash ./scripts/ci-validate.sh
