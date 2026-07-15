@@ -1,3 +1,4 @@
 # Lista de tarefas
 
-Ainda não há tarefas cadastradas.
+- [ ] Criar a branch develop
+- [ ] Criar uma branch de feature
