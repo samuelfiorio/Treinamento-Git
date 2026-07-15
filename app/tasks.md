@@ -1,7 +1,9 @@
 # Lista de tarefas
 
-- [ ] Criar a branch develop
+- [ ] Preparar ambiente
+- [ ] Criar branch develop
 - [ ] Criar uma branch de feature
 - [ ] Implementar a funcionalidade
-- [ ] Executar a validação local
+- [ ] Resolver conflito de merge
+- [ ] Executar a validacao local
 - [ ] Enviar a branch para o GitLab
